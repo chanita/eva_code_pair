@@ -8,14 +8,16 @@ callingCustomer(230, 3);
 // ลูกค้่า 1-4 คน ให้พนักงานกดปุ่ม A
 // ลูกค้่า 5 คนขึ้นไป ให้พนักงานกดปุ่ม B
 
-function pressQueueButton(numberOfCustomer) {
-    if (numberOfCustomer < 4) {
-        console.log("ลูกค้า A " + numberOfCustomer + " ท่าน")
+function pressAmountOfCustomerButton(amountOfCustomer) {
+    if (amountOfCustomer < 4) {
+        console.log("ลูกค้า A " + amountOfCustomer + " ท่าน")
     }
     else {
-        console.log("ลูกค้า B " + numberOfCustomer + " ท่าน")
+        console.log("ลูกค้า B " + amountOfCustomer + " ท่าน")
     }
 }
 
-pressQueueButton(5);
-pressQueueButton(2);
+pressAmountOfCustomerButton(5);
+pressAmountOfCustomerButton(2);
+pressAmountOfCustomerButton(8);
+pressAmountOfCustomerButton(1);
