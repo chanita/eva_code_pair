@@ -1,8 +1,9 @@
 function sayWelcomeTo(customerNickName) {
-    if (customerNickName) 
+    if (customerNickName) {
         return "สวัสดีค่ะ คุณ " + customerNickName;
-    else
+    } else {
         return "สวัสดีค่ะ คุณ ลูกค้า";
+    }
 }
 
 // let greeting = sayWelcomeTo("Air");
