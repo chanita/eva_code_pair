@@ -1,0 +1,11 @@
+{
+  "name": "code_pair",
+  "version": "1.0.0",
+  "description": "เทสพี่แอร์",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Eva",
+  "license": "ISC"
+}

@@ -1,8 +1,11 @@
-console.log("Hello boss");
-let firstName = "Naphassawan";
-let lastName = "Tungsaereesittikul";
-let age = 16;
+function sayWelcomeTo(customerNickName) {
+    if (customerNickName) 
+        return "สวัสดีค่ะ คุณ " + customerNickName;
+    else
+        return "สวัสดีค่ะ คุณ ลูกค้า";
+}
 
-console.log(firstName);
-console.log(lastName);
-console.log(age);
+// let greeting = sayWelcomeTo("Air");
+// console.log(greeting)
+
+module.exports = sayWelcomeTo;
