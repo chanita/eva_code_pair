@@ -8,32 +8,67 @@
 // อยากส่งค่า ที่คนวันจันทร์ต้องการเสริมดวง แบบรับส่ง Parameter
 // เขียน switch
 
-let color;
-let unluckyColor = "สีแดง";
-let noInfo = "";
-let mondayWallet;
-function mondayWalletBenefit(typeOfBenefit) {
-    return "สีกระเป๋า เพื่อเสริม " + typeOfBenefit;
+// let color;
+// let unluckyColor = "สีแดง";
+// let noInfo = "";
+// let mondayWallet;
+// function mondayWalletBenefit(typeOfBenefit) {
+//     return "สีกระเป๋า เพื่อเสริม " + typeOfBenefit;
+// }
+
+// switch (mondayWallet) {
+//     case "พลัง":
+//         color = "สีเหลือง, สีเหลืองอ่อน, สีขาว, สีเทา, สีเขียวแก่, สีเขียวแก่";
+//         break;
+//     case "สุขภาพ":
+//         color = "สีชมพู, สีโอรส";
+//         break;
+//     case "โชคดี":
+//         color = "สีดำ, สีม่วง, สีน้ำตาลเข้ม";
+//         break;
+//     case "การเงิน":
+//         color = "สีเหลืองเข้ม, สีทอง, สีส้ม";
+//         break;
+//     default:
+//         noInfo = "ขออภัยไม่มีข้อมูลดังกล่าว";
+// }
+
+// console.log(mondayWalletBenefit("พลัง"));
+// console.log("คือ " + color );
+// console.log("สีกระเป๋า ที่ควรหลีกเลี่ยงของคนเกิด วันจันทร์ได้แก่ " + unluckyColor );
+// console.log(noInfo);
+
+
+// function mondayWallet1(typeOfBenefit) {
+//     if (typeOfBenefit === "โชคลาภ") {
+//         return "สีดำ, สีม่วง, สีน้ำตาลเข้ม";
+//     } else if (typeOfBenefit === "พลัง") {
+//         return "สีเหลืองเข้ม, สีทอง, สีส้ม";
+//     } else if (typeOfBenefit === "ร่ำรวย") {
+//         return "สีดำ, สีม่วง, สีน้ำตาลเข้ม";
+//     } else if (typeOfBenefit === "กาลกิณี") {
+//         return "สีแดง";
+//     }
+// }
+
+// console.log("คนเกิดวันจันทร์ สีที่เสริมพลัง คือ " + mondayWallet1("พลัง"));
+// console.log("คนเกิดวันจันทร์ สีที่เป็นกาลกิณี คือ " + mondayWallet1("กาลกิณี"));
+
+function colorMondayWallet(typeOfBenefit) {
+    switch (typeOfBenefit) {
+        case "พลัง":
+            return "สีกระเป๋า ที่เสริมเรื่อง พลัง ของคนเกิดวันจันทร์ได้แก่ สีเหลือง, สีเหลืองอ่อน, สีขาว, สีเทา, สีเขียวแก่, สีเขียวแก่";
+        case "สุขภาพ":
+            return "สีกระเป๋า ที่เสริมเรื่อง สุขภาพ ของคนเกิดวันจันทร์ได้แก่ สีชมพู, สีโอรส";
+        case "โชคดี":
+            return "สีกระเป๋า ที่เสริมเรื่อง โชคดี ของคนเกิดวันจันทร์ได้แ สีดำ, สีม่วง, สีน้ำตาลเข้ม";
+        case "การเงิน":
+            return "สีกระเป๋า ที่เสริมเรื่อง การเงิน ของคนเกิดวันจันทร์ได้แก่ สีเหลืองเข้ม, สีทอง, สีส้ม";
+        case "กาลกิณี":
+            return "สีกระเป๋า ที่ควรหลีกเลี่ยง ของคนเกิดวันจันทร์ได้แก่ สีแดง"
+        default:
+            noInfo = "ขออภัยไม่มีข้อมูลดังกล่าว";
+    }
 }
 
-switch (mondayWallet) {
-    case "พลัง":
-        color = "สีเหลือง, สีเหลืองอ่อน, สีขาว, สีเทา, สีเขียวแก่, สีเขียวแก่";
-        break;
-    case "สุขภาพ":
-        color = "สีชมพู, สีโอรส";
-        break;
-    case "โชคดี":
-        color = "สีดำ, สีม่วง, สีน้ำตาลเข้ม";
-        break;
-    case "การเงิน":
-        color = "สีเหลืองเข้ม, สีทอง, สีส้ม";
-        break;
-    default:
-        noInfo = "ขออภัยไม่มีข้อมูลดังกล่าว";
-}
-
-console.log(mondayWalletBenefit("พลัง"));
-console.log("คือ " + color );
-console.log("สีกระเป๋า ที่ควรหลีกเลี่ยงของคนเกิด วันจันทร์ได้แก่ " + unluckyColor );
-console.log(noInfo);
+module.exports = colorMondayWallet;
