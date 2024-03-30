@@ -13,5 +13,3 @@ console.log(officer.length);
 const numberOfofficer = officer.length;
 const thirdIndex = numberOfofficer - 2;
 console.log(officer[thirdIndex]);
-
-
