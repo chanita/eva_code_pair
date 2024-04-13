@@ -5,7 +5,7 @@
 //• คำนวณราคาสินค้า เมื่อรวม tax แล้ว ของ 3 ชิ้น
 
 // เก็บราคาสินค้า เป็น array 3ชิ้น เก็บเป็น number
-const groceryPriceList = [30,52,16.5];
+const groceryPriceList = [30,52,16.5,10];
 
 //สร้าง function ชื่อ calTax รับ parameter priceBeforeTax
 //function การหา tax ของสินค้า
@@ -27,3 +27,6 @@ function sumPriceAndTax(tax,index) {
 //เก็บ ตัวแปร ชื่อ actualPrice และใช้ method ของ array .map เรียก sumPriceAndTax function เพื่อคำนวนราคา หลังรวม tax ทั้งหมดที่มีใน array
 const actualPrice = tax.map(sumPriceAndTax);
 console.log(actualPrice);
+
+
+module.exports = calTax;
