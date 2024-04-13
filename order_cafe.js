@@ -1,5 +1,3 @@
-
-
 // ต้องทำ switch case
 // เก็บแต่ละเมนูราคาเท่าไหร่
 // ถ้าใส่เย็น เพิ่ม 5 บาท
@@ -39,6 +37,5 @@ function totalPrice(coffeeMenu, priceCoffeeMenu, iceOrHot, bringTheirOwnCup) {
 
     return "ราคา " + coffeeMenu + " " + (price + extraOrDiscountMoney + extraOrDiscountForOwnCup) + " บาทค่ะ";
 }
-console.log(totalPrice(coffeeMenu[0], "americano", "ice", true))
 
 module.exports = { totalPrice, coffeeMenu };
