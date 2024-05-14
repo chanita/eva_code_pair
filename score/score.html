@@ -8,7 +8,7 @@
         .button {
             border: none;
             color: white;
-            padding: 5px 50px;
+            padding: 6px 20px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
@@ -39,9 +39,21 @@
         <label for="fname">First name:</label>
         <input type="text" id="fname"><br><br>
         <label for="lname">Last name:</label>
-        <input type="text" id="lname">
-    </form><br>
-    <button class="button button2" id="confirmButton" onclick="clickConfirm()">ตรวจสอบ</button>
+        <input type="text" id="lname"><br><br>
+        <button class="button button2" id="verifyButton" onclick="clickVerify()">ตรวจสอบ</button>
+    </form>
+    <form>
+        <p><b>เพิ่มข้อมูลนักเรียน</b></p>
+        <label for="addfname">First name:</label>
+        <input type="text" id="addfname"required>
+        <p><label for="addlname">Last name:</label>
+        <input type="text" id="addlname"
+        required></p>
+        <p><label for="addscore">score:</label>
+        <input type="number" id="addscore"></p>
+        <button type="button" class="button button1" id="confirmButton" onclick="clickConfirmAddStudentInfo()">ยืนยัน</button>
+    </form>
+
 </body>
 
 </html>
