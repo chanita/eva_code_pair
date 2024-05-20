@@ -54,6 +54,85 @@
         <button type="button" class="button button1" id="confirmButton" onclick="clickConfirmAddStudentInfo()">ยืนยัน</button>
     </form>
 
+    <hr/>
+    <ul id="StudentListDisplay">
+        <li>Chanita Anuwong 80</li>
+        <li>item 2</li>
+    </ul>
+
+    <script>
+        
+        // โปรแกรมเรา ต้องหาเจอ เป้าหมาย ul เขียนโค้ดยังไง(ul ไหน)
+        // วน เอา นักเรียนแต่ละคน ไปใส่ วนกี่รอบ -> 4 คน
+        // ซึ่งแต่ละคน 
+            // เราต้อง ประกอบ ชื่อ และ คะแนน เช่น Chanita Anuwong 80 
+            // ซึ่งก็คือ student.firstName + " " + student.lastName + " " + student.score
+            // ซึ่งก็คือ TextElement 
+            // ที่เป็นไส้ ของ <li>
+
+            // สร้าง li element เปล่าขึ้นมา
+            // เอาไส้ไปยัด ให้ li ก็จะได้ <li>Chanita Anuwong 80</li>
+
+            // จากนั้น เอา <li>Chanita Anuwong 80</li> ไปยัดให้เป็นไส้ ของ <ul id="StudentListDisplay">
+            // เสร็จขั้นตอน ของการ แสดงรายชื่อของนักเรียนแต่ละคน
+
+        // วนทำซ้ำจนครบทุกคน
+        
+        let listDisplay = document.getElementById("StudentListDisplay");
+
+        // 1 Student
+        let newLi;
+        let newText;
+
+        newLi = document.createElement("li");
+        newText = document.createTextNode("Chanita Anuwong 80");
+        newLi.appendChild(newText);
+        listDisplay.appendChild(newLi);
+
+        newLi2 = document.createElement("li");
+        newText2 = document.createTextNode("Techo Anuwong 30");
+        newLi2.appendChild(newText2);
+        listDisplay.appendChild(newLi2);
+
+        newLi3 = document.createElement("li");
+        newText3 = document.createTextNode("Ohchay Anuwong 70");
+        newLi3.appendChild(newText3);
+        listDisplay.appendChild(newLi3);
+
+
+        let student;
+        for (index in studentInfo){ //index = 3
+            student = studentInfo[index];
+            newLiX = document.createElement("li");
+            newTextX = document.createTextNode(student.firstName + " " + student.lastName + " " + student.score);
+            newLiX.appendChild(newTextX);
+            listDisplay.appendChild(newLiX);
+        } //จบรอบของ 1 คน
+
+
+        studentInfo.forEach((student) => {
+            newLiX = document.createElement("li");
+            newTextX = document.createTextNode(student.firstName + " " + student.lastName + " " + student.score);
+            newLiX.appendChild(newTextX);
+            listDisplay.appendChild(newLiX);
+        }); //จบรอบของ 1 คน
+            
+
+    </script>
+    
+
+
+
+    <!-- const listDisplay = document.getElementById("StudentListDisplay");
+        let newElement;
+
+        for (student in studentInfo){
+            newLi = document.createElement("li");
+            newText = student.firstName + " " + student.lastName + " " + student.score;
+            newTextElement = document.createTextNode( )
+            listDisplay
+        } -->
+
 </body>
 
 </html>

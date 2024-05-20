@@ -67,4 +67,4 @@ function clickConfirmAddStudentInfo() {
     console.log(studentInfo);
 }
 
-module.exports = gradeCriteria;
+// module.exports = gradeCriteria;
